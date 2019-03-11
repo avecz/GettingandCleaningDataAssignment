@@ -1,7 +1,8 @@
-# config variables
-  oldwd <- "C:/Users/pedro/Documents/Coursera/Data Science JHU"
-  setwd(paste(oldwd,"Course 3 - Getting and Cleaning Data", "Course Project", "getdata_projectfiles_UCI HAR Dataset", "UCI HAR Dataset", sep = "/"))
-  projectdir <- getwd()
+# config variables - not necessary if Samsung data is already in the working directory.
+#  oldwd <- "C:/Users/pedro/Documents/Coursera/Data Science JHU"
+#  setwd(paste(oldwd,"Course 3 - Getting and Cleaning Data", "Course Project", "getdata_projectfiles_UCI HAR Dataset", "UCI HAR Dataset", sep = "/"))
+
+projectdir <- getwd()
 
 # invoke all libraries necessary for the script
   library(dplyr)
@@ -69,4 +70,4 @@
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   tidydataaverage <- group_by(tidydata, subject, label)
-  summarize_all(tidydataaverage, mean)
+  tidydataaverage <- summarize_all(tidydataaverage, mean)
