@@ -1,6 +1,6 @@
 # Course Project Code Book
 
-##summary
+## summary
 There are 67 variables in the tidy data set, all these variables are detailed in the table below:
 
 variable name | units | Other Information
